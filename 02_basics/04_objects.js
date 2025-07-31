@@ -26,7 +26,7 @@ const obj2 = {3: "a" , 4: "b"}
 
 const obj3 = {...obj1, ...obj2}
 
-console.log(obj3)
+// console.log(obj3)
 
 const user = [
     {
@@ -39,10 +39,54 @@ const user = [
     }
 ]
 
-console.log(user[1].email)
+// console.log(user[1].email)
 
 // console.log(Object.keys(tinder_user)) // userfull
 // console.log(Object.values(tinder_user)) // usefull
 // console.log(object.entries(tinder_user) // ver less use
 
-console.log(tinder_user.hasOwnProperty('name')) // to chech property has or not 
+// console.log(tinder_user.hasOwnProperty('name')) // to chech property has or not 
+
+
+// de structring
+
+const course = {
+    course_name : " js in hindi ",
+    price : "999",
+    course_instructor : "arun"
+
+
+}
+
+// course.course_instructor // not prefer
+
+// const {course_instructor : ins} = course
+
+// console.log(course_instructor)
+// console.log(ins)
+
+
+// const navbar = ({company})=>{
+
+// }
+
+// navbar(company = "arun")
+
+// most of the times api's comes in json file
+
+// {
+//     "name": "arun",
+//     "course_name" : "js in english",  
+//     "price" : "free"
+// }
+
+// sometimes it also come in an array
+
+// [
+
+// ]
+
+// api example from random user api
+
+
+
