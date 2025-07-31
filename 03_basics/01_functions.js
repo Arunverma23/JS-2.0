@@ -37,5 +37,34 @@ function login_user_message(username = "sam")
     }
 }
 
-console.log(login_user_message())
+// console.log(login_user_message())
 
+function calculate_cart_price(val1 , val2 , ...num1){
+     return num1
+}
+
+// console.log(calculate_cart_price(2,2,0))
+
+const user = {
+    user_name  : "Arun Verma",
+    prices : 199
+}
+
+function handleObject(anyobject){
+    console.log(`user_name is : ${anyobject.user_name} and price is : ${anyobject.price}`)
+}
+
+// handleObject(user)
+
+// handleObject({
+//     user_name : "sum",
+//     price:234
+// })
+
+const arr = [200 , 400 , 6000]
+
+function return_second_value (getArry){
+    return getArry[2]
+}
+
+// console.log(return_second_value(arr))
