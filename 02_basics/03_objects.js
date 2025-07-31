@@ -21,3 +21,15 @@ const js_user = { name:"Arun" , "nam e":"Arun" ,[mysym] : "arun"}
 // Object.freeze(js_user)
 // console.log(js_user.name)
 // console.log(js_user)
+
+js_user.greeting = function()
+{
+    console.log("hello dear")
+}
+
+js_user.greeting2 = function()
+{
+    console.log(`hello dear, ${this.name}`)
+}
+
+console.log(js_user.greeting2())
