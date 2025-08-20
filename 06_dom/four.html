@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM || ARUN VERMA </title>
+
+</head>
+<body style="background-color: bisque;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+    function add_language(lang_name){
+        const li = document.createElement('li')
+        li.innerHTML = `${lang_name}`
+        document.querySelector('.language').appendChild(li)
+    }
+
+    add_language("c++")
+    add_language("python")
+    add_language("java")
+
+    function add_opti_language(lang_name)
+    {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(lang_name))
+        document.querySelector('.language').appendChild(li)   
+    }
+
+    add_opti_language("Go Lang")
+
+    // edit
+
+    const second_lang = document.querySelector("li:nth-child(2)")
+    // second_lang.innerHTML = "Mojo"
+
+    const new_li = document.createElement('li')
+    new_li.textContent = "mojooo"
+
+    second_lang.replaceWith(new_li)
+
+    // edit 
+
+    const first_lang = document.querySelector("li:nth-child(1)")
+    first_lang.outerHTML = '<li>TypeScript</li>'
+
+    // remove
+    const last_lang = document.querySelector('li:last-child')
+    last_lang.remove()
+</script>
+</html>
