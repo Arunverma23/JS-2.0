@@ -219,3 +219,40 @@ function new_game()
 }
 
 ```
+
+## Project 5
+
+``` JavaScript
+
+const body = document.querySelector('body')
+const start = document.querySelector("#start");
+const stop = document.querySelector('#stop')
+const color_code = document.querySelector('#color_code')
+
+let color_stop;
+
+function get_random_hex_colors()
+{
+  let letters = '0123456789ABCDEF'
+  let colors = '#'
+
+  for(let i=0;i<6;i++)
+  {
+    colors += letters[Math.floor(Math.random() * 16)]
+    color_code.innerHTML = colors
+  }
+  return colors
+}
+const color_change = function(){
+   body.style.backgroundColor = get_random_hex_colors();
+}
+
+start.addEventListener('click',function(){
+  color_stop = setInterval(color_change,1000)
+})
+
+stop.addEventListener('click',function(){
+  clearInterval(color_stop)
+})
+
+```
