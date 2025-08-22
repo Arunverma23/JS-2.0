@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arun Verma</h1>
+    <button id="stop">Stop</button>
+    <div id="timer" style="color:rgb(245, 0, 0); margin-top: 20px; background-color: black;" >
+        <span id="time"></span>
+    </div>
+</body>
+
+<script>
+
+const clock = document.querySelector('#time')
+
+setInterval(function(){
+  let date = new Date()
+  clock.innerHTML = date.toLocaleTimeString()
+},1000)
+
+// setTimeout(function(){
+//    console.log("Arun Verma")
+// },2000)
+
+const sayArun = function(){
+   console.log("Arun Verma")
+}
+
+// document.querySelector('h1').innerHTML = "Good Luck Arun" // i want this work done in 2 sec
+const change_text = function(){
+    document.querySelector('h1').innerHTML = "Good Luck Arun"
+
+}
+
+// setTimeout(sayArun,2000);
+const change_me = setTimeout(change_text,5000)
+
+// clearTimeout(change_me) // i want to apply this on an event
+
+document.querySelector("#stop").addEventListener('click',function(){
+    clearTimeout(change_me)
+    console.log("stopped")
+})
+
+</script>
+
+</html>
