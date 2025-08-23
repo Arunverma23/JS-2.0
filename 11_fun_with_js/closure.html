@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body style="background-color: black;">
+
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+    <button id="reset">Reset</button>
+    
+    <script>
+        // function init(){
+        //     var name = "Mozilla"
+        //         function displayName(){
+        //             // displayName() is the inner function , that forms the closure
+        //             console.log(name); // use varibale declared in the parent function
+        //         }
+        //         displayName();
+        // }
+        // init();
+
+        // function outer(){
+        //     let username = "Arun"
+        //     function inner(){
+        //         console.log("inner: ",username)
+        //     }
+        //     inner()
+
+        // }
+        // outer()
+        // console.log("too outer:" ,username)
+
+        // function makeFunc(){
+        //     const name = "Mozilla"
+        //     function displayName(){
+        //         console.log(name)
+        //     }
+        //     return displayName
+        // }
+
+        // const myFunc = makeFunc()
+        // myFunc()
+
+
+
+    </script>
+
+    <script>
+        // const orange = document.querySelector('#orange')
+        // const green = document.querySelector('#green')
+        // const reset = document.querySelector('#reset')
+        // const body = document.querySelector('body')
+
+        // orange.addEventListener('click',function(){
+        //     body.style.backgroundColor = "orange";
+        // })
+
+        // green.addEventListener('click',function(){
+        //     body.style.backgroundColor = "green";
+        // })
+
+        // reset.addEventListener('click',function(){
+        //     body.style.backgroundColor = "black"
+        // })
+
+        function clickHandler(color){
+            // document.body.style.backgroundColor = `${color}` 
+
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+        document.getElementById('orange').onclick = clickHandler("orange")
+        document.getElementById('green').onclick = clickHandler("green")
+        document.getElementById('reset').onclick = clickHandler("black")
+
+    </script>
+
+</body>
+</html>
